@@ -30,12 +30,23 @@ if __name__ == "__main__":
     first_name = input("Type in a new first name (or leave blank):")      
     last_name = input("Type in a new last name (or leave blank): ")  
     hobbies = input("Type in a new hobbies (or leave blank): ")
+    color = input("Type the color of car: ")
+    license_plate = input("Type the license plate: ")
+    v_type = input("Enter vehicle type: ")
+    
     if first_name:
         target_user["first_name"] = first_name
     if last_name:
         target_user["last_name"] = last_name
     if hobbies:
         target_user["hobbies"] = hobbies
+    if color:
+        target_user["color"] = color
+    if license_plate:
+        target_user["license_plate"] = license_plate   
+    if v_type:
+        target_user["v_type"] = v_type    
+
     update_user(target_user, user_id)
     option = input("Would you like to see the updated user? [Y/N]")  
     if option == "y" or option == "Y":
